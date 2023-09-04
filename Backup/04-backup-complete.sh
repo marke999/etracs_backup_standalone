@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Get the etracs/bin folder
+etracs_bin=etracs255-server-municipality/bin
+
 #Get the current date
 date_now=$(date +'%Y-%b-%d')
 
@@ -27,4 +30,7 @@ echo ""
 rm -rf $date_now
 
 
-
+#Pause first before rebooting the server
+sleep 5
+cd ~/etracs_bin
+sh run.sh
